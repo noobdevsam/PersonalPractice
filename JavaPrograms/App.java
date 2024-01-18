@@ -14,7 +14,21 @@ public class App {
 		System.out.println("-----Check even/odd-----");
 		check_even_or_odd();
 		System.out.println("-----End-----");
+		System.out.println("-----Sum of numbers-----");
+		sum_of_numbers();
+		System.out.println("-----End-----");
+		
 		sc.close();
+	}
+
+	private static void sum_of_numbers() {
+		int num = 100, sum = 0;
+
+		for(int i = 0; i <= num; ++i) {
+			sum += i;
+		}
+
+		System.out.println("Sum of numbers from 1 to 100: " + sum);
 	}
 
 	private static void check_even_or_odd() {

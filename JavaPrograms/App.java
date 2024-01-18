@@ -1,8 +1,12 @@
 import java.util.Scanner;
 
-public class CheckPrimeNum{
+public class App{
     public static void main(String[] args) {
-        /* A prime number is a number that is divisible by only two numbers: 		1 and itself.
+		check_for_prime_number();
+    }
+
+	private static void check_for_prime_number() {
+		/* A prime number is a number that is divisible by only two numbers: 		1 and itself.
         So, if any number is divisible by any other number, it is not a prime number.
         */
         System.out.print("Input a integer number: ");
@@ -25,5 +29,5 @@ public class CheckPrimeNum{
 			    System.out.println("a non-prime number.");
 			}
 		}
-    }
+	}
 }

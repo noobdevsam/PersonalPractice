@@ -11,7 +11,17 @@ public class App {
 		System.out.println("-----Print half pyramid with symbol-----");
 		print_half_pyramid_with_symbol();
 		System.out.println("-----End-----");
+		System.out.println("-----Check even/odd-----");
+		check_even_or_odd();
+		System.out.println("-----End-----");
 		sc.close();
+	}
+
+	private static void check_even_or_odd() {
+		System.out.print("Input a integer number: ");
+		int num = sc.nextInt();
+		String rs = (num % 2 == 0) ? "even number" : "odd number";
+		System.out.println("The given number " + num + " is: " + rs);
 	}
 
 	private static void check_for_prime_number() {
@@ -40,7 +50,6 @@ public class App {
 	}
 
 	private static void print_half_pyramid_with_symbol() {
-
 		System.out.print("Input the number of rows: ");
 		int rows = sc.nextInt();
 

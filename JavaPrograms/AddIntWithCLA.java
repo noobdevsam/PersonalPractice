@@ -7,3 +7,6 @@ public class AddIntWithCLA {
 		System.out.println("Sum of two integer: " + args[0] + " + " + args[1] + " = "+ add);
 	}
 }
+
+// Compile: java AddIntWithCLA.java
+// Run: java AddIntWithCLA 63 83

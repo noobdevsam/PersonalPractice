@@ -8,5 +8,5 @@ public class AddIntWithCLA {
 	}
 }
 
-// Compile: java AddIntWithCLA.java
+// Compile: javac AddIntWithCLA.java
 // Run: java AddIntWithCLA 63 83

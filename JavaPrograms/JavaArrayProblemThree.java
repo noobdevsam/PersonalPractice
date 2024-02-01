@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class JavaArrayProblemThree {
-	// 
+	//adding new element to the array
 	public static void main(String[] args) {
 		int[] my_array = {25, 14, 56, 15, 65, 85, 75, 36, 19, 93, 43};
 		int index_position = 3, new_value = 20;

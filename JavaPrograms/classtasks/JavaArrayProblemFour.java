@@ -1,4 +1,4 @@
-package ClassTasks;
+package classtasks;
 public class JavaArrayProblemFour {
 	// addition of two matrix
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ClassTasks;
+package classtasks;
 import java.util.Arrays;
 
 public class JavaArrayProblemThree {

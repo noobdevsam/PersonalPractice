@@ -1,4 +1,4 @@
-package ClassTasks;
+package classtasks;
 public class JavaArrayProblemFive {
 	// find the largest element of an array
 	public static void main(String[] args) {

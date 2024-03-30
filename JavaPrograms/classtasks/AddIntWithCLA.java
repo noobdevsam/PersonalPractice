@@ -1,4 +1,4 @@
-package ClassTasks;
+package classtasks;
 public class AddIntWithCLA {
 	public static void main(String[] args) {
 		int var1, var2, add;

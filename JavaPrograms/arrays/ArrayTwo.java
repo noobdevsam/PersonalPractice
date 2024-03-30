@@ -1,4 +1,4 @@
-package Arrays;
+package arrays;
 
 // print a two dimentional array
 public class ArrayTwo {

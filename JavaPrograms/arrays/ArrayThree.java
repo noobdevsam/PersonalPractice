@@ -1,7 +1,5 @@
 package arrays;
 
-import java.util.Arrays;
-
 // check if a value exists in a array
 public class ArrayThree {
     public static void main(String[] args) {

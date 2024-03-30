@@ -1,3 +1,4 @@
+package ClassTasks;
 public class MultiplyInOopManner {
 	private int var1,var2;
 	

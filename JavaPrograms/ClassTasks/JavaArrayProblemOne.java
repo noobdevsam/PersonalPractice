@@ -1,3 +1,4 @@
+package ClassTasks;
 public class JavaArrayProblemOne {
 
 	// checks if a element ''item'  exists in array named 'arr'

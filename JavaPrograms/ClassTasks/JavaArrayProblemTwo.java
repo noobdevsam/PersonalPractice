@@ -1,3 +1,4 @@
+package ClassTasks;
 public class JavaArrayProblemTwo {
 	// getting the sum of all elements in a array
 	public static void main(String[] args) {

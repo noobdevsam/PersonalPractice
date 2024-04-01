@@ -30,6 +30,16 @@ public class ArrayNine {
         return -1; // not found before currentIndex
     }
 
+    /*
+    Here's a breakdown of why it works:
+
+        1. **`seen` array:** The `seen` array is a boolean array with the same size as the input array. It's used to track if an element has been encountered before.
+        2. **Outer loop:** The outer loop iterates through each element in the input array.
+        3. **Checking for duplicates:** Inside the loop, it checks if the current element's index (`arr[i]`) in the `seen` array is already marked as true. This indicates the element has been seen before.
+            - If a duplicate is found (`seen[arr[i]] == true`), the program calls `findFirstIndex` to get the first occurrence's index. It then prints details about the duplicate element.
+            - If the element hasn't been seen yet (`seen[arr[i]] == false`), the program marks it as seen by setting the corresponding index in the `seen` array to true.
+        4. **`findFirstIndex` function:** This function iterates through the array from the beginning (index 0) up to, but not including, the current index (`currentIndex`). It checks if any element before the current one matches the current element. If a match is found, it returns the index of the first occurrence. Otherwise, it returns -1.
+    */
 }
 
 

@@ -35,7 +35,7 @@ public class ArrayThirty {
         }
     }
 
-    // cyclally rotate array
+    // rotate array
     private static void rotate(int[] arr) {
         if (arr.length != 0 || arr.length != 1) {
             int last = arr[arr.length-1];

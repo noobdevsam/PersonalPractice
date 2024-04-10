@@ -3,6 +3,7 @@ package arrays;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+// check if a given array contains a subarray with 0 sum.  
 public class ArrayThirtyFive {
     public static void main(String[] args) {
         int[] arr = { 1, 3, -7, 3, 2, 3, 1, -3, -2, -2 };

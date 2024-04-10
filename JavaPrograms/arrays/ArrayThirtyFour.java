@@ -8,7 +8,7 @@ public class ArrayThirtyFour {
     public static void main(String[] args) {
         int[] arr = { 45, 20, 100, 23, -5, 2, -6 };
         System.out.println("Original: " + Arrays.toString(arr));
-        System.out.println("Original: " + Arrays.toString(arrangeWithNextGreatest(arr)));
+        System.out.println("Modified: " + Arrays.toString(arrangeWithNextGreatest(arr)));
     }
 
     private static int[] arrangeWithNextGreatest(int[] arr) {

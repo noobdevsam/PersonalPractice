@@ -10,7 +10,7 @@ public class FileWriteRead {
     public static void main(String[] args) {
 
         File file = new File("./Output.txt");
-        
+
         try {
             if (file.createNewFile()) {
                 System.out.println("New file created.");
@@ -25,7 +25,6 @@ public class FileWriteRead {
 
         try {
             Writer wr = new FileWriter(file);
-            wr.
             String str = "Writing this line in the file.";
             wr.write(str);
             wr.append(" d");

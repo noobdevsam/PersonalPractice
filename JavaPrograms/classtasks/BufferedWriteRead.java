@@ -20,7 +20,7 @@ public class BufferedWriteRead {
         } catch (Exception e) {
             e.getMessage();
         }
-        
+
         System.out.println("Starting to write: ");
 
         try {
@@ -40,10 +40,10 @@ public class BufferedWriteRead {
 
         try {
             BufferedReader bfr = new BufferedReader(new FileReader(file));
-            if (bfr.ready()) {
-                System.out.println("First line: " + bfr.readLine());
-                System.out.println("Second line: " + bfr.readLine());
-            }
+
+            System.out.println("First line: " + bfr.readLine());
+            System.out.println("Second line: " + bfr.readLine());
+
             bfr.close();
         } catch (Exception e) {
             e.getMessage();

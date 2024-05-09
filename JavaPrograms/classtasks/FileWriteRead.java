@@ -20,14 +20,14 @@ public class FileWriteRead {
         } catch (Exception e) {
             e.getMessage();
         }
-        
+
         System.out.println("Starting to write: ");
 
         try {
             Writer wr = new FileWriter(file);
             String str = "Writing this line in the file.";
             wr.write(str);
-            wr.append(" d");
+            wr.append(" d"); // method from Writer class
             wr.close();
         } catch (Exception e) {
             e.getMessage();
@@ -38,14 +38,13 @@ public class FileWriteRead {
 
         try {
             Reader rd = new FileReader(file);
-            if (rd.ready()) {
-                int i;
-                while ((i = rd.read()) != -1) {
-                    System.out.print( (char)i );
-                }
+            int i;
 
-                System.out.println();
+            while ((i = rd.read()) != -1) {
+                System.out.print((char) i);
             }
+
+            System.out.println();
             rd.close();
         } catch (Exception e) {
             e.getMessage();

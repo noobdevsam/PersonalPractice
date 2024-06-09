@@ -39,6 +39,8 @@ public class StaticSyncAnonymCls {
 }
 
 class Table5 {
+
+    // static synchronization hold a lock on class to prevent thread interruption
     synchronized static void printTbl(int n) {
         System.out.println("For n: " + n);
 

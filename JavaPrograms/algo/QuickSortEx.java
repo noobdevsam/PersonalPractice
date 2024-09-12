@@ -115,9 +115,9 @@ Here’s a breakdown:
 
 ### Summary:
 
-- **Best Case:** \( O(n \log n) \)
-- **Average Case:** \( O(n \log n) \)
-- **Worst Case:** \( O(n^2) \)
+Best Case: O(nlog⁡n)
+Average Case: O(nlog⁡n)
+Worst Case: O(n²)
 
 ### Space Complexity:
 - The space complexity of Quick Sort is **O(log n)** due to the recursive call stack.

@@ -62,3 +62,49 @@ public class BinarySearchEx {
         return true;
     }
 }
+
+/*
+
+Let's analyze the **time complexity** for the code you provided.
+
+### Code Breakdown:
+1. **Check if the array is sorted (`isSorted()` method)**:
+   - This method iterates through the array to check if each element is greater than or equal to the previous one.
+   - **Time complexity**: O(n), where `n` is the number of elements in the array.
+
+2. **Sorting the array (`Arrays.sort(arr)`)**:
+   - If the array is not sorted, the code sorts it using `Arrays.sort()`, which has a time complexity of **O(n log n)**.
+   - If the array is already sorted, sorting is skipped.
+
+3. **Binary search (`binarySearch()` method)**:
+   - After the array is either confirmed to be sorted or sorted, a binary search is performed.
+   - **Time complexity**: O(log n).
+
+### Time Complexity Scenarios:
+
+#### 1. **If the array is already sorted**:
+   - **Step 1: Checking if the array is sorted**: O(n).
+   - **Step 2: No sorting is required** (since the array is already sorted), so this step is skipped.
+   - **Step 3: Binary search**: O(log n).
+
+   **Total time complexity**:  
+   \[
+   O(n) \, (\text{for sorting check}) + O(\log n) \, (\text{for binary search}) = O(n)
+   \]
+
+#### 2. **If the array is not sorted**:
+   - **Step 1: Checking if the array is sorted**: O(n).
+   - **Step 2: Sorting the array**: O(n log n).
+   - **Step 3: Binary search**: O(log n).
+
+   **Total time complexity**:  
+   
+   O(n)(for sorting check)+O(nlogn)(for sorting)+O(logn)(for binary search)=O(nlogn)
+
+### Summary:
+- **If the array is already sorted**: **O(n)**.
+- **If the array is not sorted**: **O(n log n)**.
+
+This is consistent with the earlier analysis and applies to your new code as well.
+
+*/

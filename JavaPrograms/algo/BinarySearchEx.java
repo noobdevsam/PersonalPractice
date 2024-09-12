@@ -88,9 +88,8 @@ Let's analyze the **time complexity** for the code you provided.
    - **Step 3: Binary search**: O(log n).
 
    **Total time complexity**:  
-   \[
-   O(n) \, (\text{for sorting check}) + O(\log n) \, (\text{for binary search}) = O(n)
-   \]
+
+   O(n) {for sorting check} + O(log n) {for binary search} = O(n)
 
 #### 2. **If the array is not sorted**:
    - **Step 1: Checking if the array is sorted**: O(n).

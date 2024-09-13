@@ -106,4 +106,54 @@ Let's analyze the **time complexity** for the code you provided.
 
 This is consistent with the earlier analysis and applies to your new code as well.
 
+-----------
+
+
+The overall time complexity of the binary search algorithm depends on the context in which it is used and the initial conditions of the array (whether it is sorted or not). Let's break it down into two primary cases:
+
+1. If the Array is Already Sorted:
+
+In this case, the binary search algorithm directly operates on the sorted array.
+
+Time complexity:
+
+Binary search alone: O(log n), where n is the number of elements in the array.
+
+
+
+This is the ideal time complexity when performing binary search on a pre-sorted array.
+
+2. If the Array is Not Sorted:
+
+Binary search requires a sorted array to function correctly. If the array is not sorted, you need to sort it first before applying binary search.
+
+Time complexity:
+
+Sorting the array: O(n log n), using a typical efficient sorting algorithm like Merge Sort, Quick Sort, or the built-in Java Arrays.sort() (which is typically a variant of TimSort).
+
+Binary search: O(log n) after sorting.
+
+
+Total time complexity:
+
+
+O(n log n),{for sorting} + O(log n),{for binary search} = O(n log n)
+
+Since O(n log n) dominates O(log n), the overall time complexity when the array is unsorted is O(n log n).
+
+Summary of Overall Time Complexities:
+
+If the array is already sorted: O(log n) (binary search only).
+
+If the array is not sorted: O(n log n) (sorting + binary search).
+
+
+Thus, the overall time complexity of binary search depends on whether the array is sorted:
+
+O(log n) if the array is sorted.
+
+O(n log n) if the array needs to be sorted first.
+
+
+
 */

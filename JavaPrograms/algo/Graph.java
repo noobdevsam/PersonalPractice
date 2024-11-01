@@ -4,74 +4,46 @@ import java.util.*;
 
 public class Graph<V, E> {
 
-    private final Map<V, List<Edge<V, E>>> adjacencyList = new HashMap<>();
-    private final boolean isDirected;
-
-    private static class Edge<V, E> {
-        V destination;
-        E value;
-
-        public Edge(V destination, E value) {
-            this.destination = destination;
-            this.value = value;
-        }
-
-        @Override
-        public String toString() {
-            return "(" + destination + ", " + value + ")";
-        }
-    }
+    protected final Map<V, List<Edge<V, E>>> adjacencyList = new HashMap<>();
+    protected final boolean isDirected;
 
     public Graph(boolean isDirected) {
         this.isDirected = isDirected;
     }
 
-    public void addVertex(V vertex) {
-        adjacencyList.putIfAbsent(vertex, new ArrayList<>());
+    public Map<V, List<Edge<V, E>>> getAdjacencyList() {
+        return adjacencyList;
     }
 
     public void addEdge(V source, V destination, E value) {
 
         adjacencyList.putIfAbsent(source, new ArrayList<>());
-        adjacencyList.putIfAbsent(destination, new ArrayList<>());
 
         adjacencyList.get(source).add(
-                new Edge<>(destination, value)
+                new Edge<>(source,destination, value)
         ); // for directed graph
 
         if (!isDirected) {
+            adjacencyList.putIfAbsent(destination, new ArrayList<>());
             adjacencyList.get(destination).add(
-                    new Edge<>(source, value)
+                    new Edge<>(destination, source, value)
             ); // setting bi-direction for undirected graph
         }
+
     }
 
     public void displayGraph() {
-        for(var entry : adjacencyList.entrySet()) {
-            System.out.print(entry.getKey() + " -> ");
 
-            List<Edge<V, E>> edges = entry.getValue();
-            for (Edge<V, E> edge : edges) {
-                System.out.print(edge + " ");
+        for(var entry : adjacencyList.entrySet()) {
+            var vertex = entry.getKey();
+            var edges = entry.getValue();
+            System.out.print(vertex + " -> ");
+            for (var edge : edges) {
+                System.out.print(edge.destination() + "(" + edge.value() + ")");
             }
             System.out.println();
         }
-    }
-
-    public static void main(String[] args) {
-        var directedGraph = new Graph<String, Integer>(true);
-        directedGraph.addVertex("A");
-        directedGraph.addVertex("B");
-        directedGraph.addVertex("C");
-        directedGraph.addVertex("D");
-
-        directedGraph.addEdge("A", "B", 5);
-        directedGraph.addEdge("A", "C", 10);
-        directedGraph.addEdge("B", "D", 2);
-        directedGraph.addEdge("C", "D", 3);
-
-        System.out.println("Directed graph: ");
-        directedGraph.displayGraph();
 
     }
+
 }

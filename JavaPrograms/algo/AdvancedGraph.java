@@ -97,6 +97,33 @@ class AdvancedGraph<V, E extends Comparable<E>> extends Graph<V, E> {
         }
         return find(parent, parent.get(vertex));
     }
+
+    // Prims MST algorithm
+    public void primsMST(V startVertex) {
+        PriorityQueue<Edge<V, E>> priorityQueue = new PriorityQueue<>(Comparator.comparing(Edge::value));
+        Set<V> visited = new HashSet<>();
+        List<Edge<V, E>> mst = new ArrayList<>();
+
+
+        visited.add(startVertex);
+        priorityQueue.addAll(getAdjacencyList().get(startVertex));
+
+        while (!priorityQueue.isEmpty() && mst.size() < (getAdjacencyList().size() - 1) ) {
+            Edge<V, E> edge = priorityQueue.poll();
+
+            if (!visited.contains(edge.destination())) {
+                mst.add(edge);
+                visited.add(edge.destination());
+                priorityQueue.addAll(getAdjacencyList().get(edge.destination()));
+            }
+        }
+
+        System.out.println("Prims MST: ");
+        for (Edge<V,E> edge : mst) {
+            System.out.println(edge.source() + " - " + edge.destination() + " : " + edge.value());
+        }
+        
+    }
 }
 
 
